@@ -11,6 +11,26 @@
     <typedef classname="com.aqua.anttask.jsystem.JSystemScriptCondition" name="jsystemscriptcondition"/>
     <taskdef classname="com.aqua.anttask.jsystem.JSystemSwitch" name="jsystemswitch"/>
     <taskdef classname="com.aqua.anttask.jsystem.JSystemForTask" name="jsystemfor"/>
+    <taskdef classname="com.aqua.anttask.jsystem.JSystemDataDrivenTask" name="jsystemdatadriven"/>
     <taskdef classname="com.aqua.anttask.jsystem.JSystemSetAntProperties" name="jsystemsetantproperties"/>
-    <target name="execute scenario"/>
+    <target name="execute scenario">
+        <antcallback target="t0"/>
+        <antcallback target="t1"/>
+    </target>
+    <target name="t0">
+        <jsystem showoutput="true">
+            <sysproperty key="jsystem.uuid" value="ae254053-d2ea-49bb-924e-2a523d50071a"/>
+            <sysproperty key="jsystem.parent.uuid" value="${jsystem.parent.uuid}.${jsystem.uuid}"/>
+            <sysproperty key="jsystem.parent.name" value="${jsystem.parent.name}.${ant.project.name}"/>
+            <test name="org.jsystem.TestsExamples.reportSuccess"/>
+        </jsystem>
+    </target>
+    <target name="t1">
+        <jsystem showoutput="true">
+            <sysproperty key="jsystem.uuid" value="bf919c5d-4bf1-42bc-861a-62278a926679"/>
+            <sysproperty key="jsystem.parent.uuid" value="${jsystem.parent.uuid}.${jsystem.uuid}"/>
+            <sysproperty key="jsystem.parent.name" value="${jsystem.parent.name}.${ant.project.name}"/>
+            <test name="org.jsystem.TestsExamples.testWithParameterProvider"/>
+        </jsystem>
+    </target>
 </project>
