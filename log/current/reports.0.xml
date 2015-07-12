@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><reports Date="Sun Jul 12 03:36:57 IDT 2015" Scenario="default" Setup="default.xml" Station="192.168.2.108" User="User" Version="unknown" startTime="1436661417752" status="true">
-    <test count="1" documentaion="" endTime="1436661417971" failCause="" name="TestsExamples.reportSuccess" package="org.jsystem" params="" properties="" startTime="1436661417768" status="true" steps="" testIndex="0"/>
-    <test count="1" documentaion="" endTime="1436661418142" failCause="" name="TestsExamples.testWithParameterProvider" package="org.jsystem" params="" properties="" startTime="1436661418049" status="true" steps="" testIndex="1"/>
-</reports>
